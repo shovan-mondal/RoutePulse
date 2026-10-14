@@ -1,0 +1,656 @@
+[
+  {
+    "scenario": "normal",
+    "seed": 2026,
+    "forecastSeed": 2115,
+    "forecastSource": "Independent seeded prior-day sample",
+    "datasetName": "Greenfield Campus",
+    "evaluationWindow": {
+      "start": "07:30",
+      "end": "09:30",
+      "minutes": 120
+    },
+    "baselinePlan": {
+      "label": "Fixed baseline v1",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 15,
+          "shift": 0
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03",
+            "RP-04"
+          ],
+          "headway": 15,
+          "shift": 3
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 6
+        }
+      ]
+    },
+    "proposedPlan": {
+      "label": "RoutePulse proposed plan",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 12,
+          "shift": 3
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03",
+            "RP-04",
+            "RP-07"
+          ],
+          "headway": 10,
+          "shift": 3
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 3
+        }
+      ]
+    },
+    "baseline": {
+      "avgWait": 7.75,
+      "unmet": 6,
+      "boarded": 471,
+      "completed": 466,
+      "missed": 25,
+      "unfinished": 5,
+      "late": 26,
+      "denied": 7,
+      "blocked": 7,
+      "maxLoad": 100,
+      "utilization": 66.23,
+      "fleetUsed": 6,
+      "vehicleMinutes": 476.86,
+      "conflicts": 0,
+      "total": 477,
+      "objectiveComponents": {
+        "wait": 7.754443515156841,
+        "unservedFraction": 0.012578616352201259,
+        "lateFraction": 0.05450733752620545,
+        "operatingMinutes": 476.85818334415524
+      },
+      "score": 9.025883372752432
+    },
+    "proposed": {
+      "avgWait": 6.33,
+      "unmet": 5,
+      "boarded": 472,
+      "completed": 462,
+      "missed": 6,
+      "unfinished": 10,
+      "late": 6,
+      "denied": 5,
+      "blocked": 5,
+      "maxLoad": 100,
+      "utilization": 69.78,
+      "fleetUsed": 7,
+      "vehicleMinutes": 586.14,
+      "conflicts": 0,
+      "total": 477,
+      "objectiveComponents": {
+        "wait": 6.333130578557565,
+        "unservedFraction": 0.010482180293501049,
+        "lateFraction": 0.012578616352201259,
+        "operatingMinutes": 586.1394694179289
+      },
+      "score": 7.177476734002872
+    },
+    "constraints": {
+      "ok": true,
+      "errors": [],
+      "checks": [
+        {
+          "name": "Vehicle availability & unique assignment",
+          "ok": true
+        },
+        {
+          "name": "Travel envelope + 2 min recovery",
+          "ok": true
+        },
+        {
+          "name": "10–20 min service headway",
+          "ok": true
+        },
+        {
+          "name": "First departure within published window",
+          "ok": true
+        },
+        {
+          "name": "Accessible vehicle on every route",
+          "ok": true
+        },
+        {
+          "name": "Boarding never exceeds seat capacity",
+          "ok": true
+        }
+      ]
+    },
+    "candidates": 5427,
+    "waitImprovementPercent": 18.32,
+    "eta": {
+      "maeSeconds": 10.63,
+      "coveragePercent": 89.17,
+      "marginMinutes": 0.34112148755111393,
+      "calibrationCount": 60,
+      "holdoutCount": 120
+    }
+  },
+  {
+    "scenario": "traffic",
+    "seed": 2026,
+    "forecastSeed": 2115,
+    "forecastSource": "Independent seeded prior-day sample",
+    "datasetName": "Greenfield Campus",
+    "evaluationWindow": {
+      "start": "07:30",
+      "end": "09:30",
+      "minutes": 120
+    },
+    "baselinePlan": {
+      "label": "Fixed baseline v1",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 15,
+          "shift": 0
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03",
+            "RP-04"
+          ],
+          "headway": 15,
+          "shift": 3
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 6
+        }
+      ]
+    },
+    "proposedPlan": {
+      "label": "RoutePulse proposed plan",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 18,
+          "shift": 3
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03",
+            "RP-04",
+            "RP-07"
+          ],
+          "headway": 12,
+          "shift": 6
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 3
+        }
+      ]
+    },
+    "baseline": {
+      "avgWait": 7.69,
+      "unmet": 6,
+      "boarded": 471,
+      "completed": 464,
+      "missed": 47,
+      "unfinished": 7,
+      "late": 48,
+      "denied": 6,
+      "blocked": 6,
+      "maxLoad": 100,
+      "utilization": 80.85,
+      "fleetUsed": 6,
+      "vehicleMinutes": 582.11,
+      "conflicts": 6,
+      "total": 477,
+      "objectiveComponents": {
+        "wait": 7.692473074151779,
+        "unservedFraction": 0.012578616352201259,
+        "lateFraction": 0.10062893081761007,
+        "operatingMinutes": 582.1063496451852
+      },
+      "score": 9.488277764442033
+    },
+    "proposed": {
+      "avgWait": 7.87,
+      "unmet": 6,
+      "boarded": 471,
+      "completed": 459,
+      "missed": 60,
+      "unfinished": 12,
+      "late": 63,
+      "denied": 11,
+      "blocked": 11,
+      "maxLoad": 100,
+      "utilization": 71.14,
+      "fleetUsed": 7,
+      "vehicleMinutes": 597.55,
+      "conflicts": 0,
+      "total": 477,
+      "objectiveComponents": {
+        "wait": 7.870380244405014,
+        "unservedFraction": 0.012578616352201259,
+        "lateFraction": 0.1320754716981132,
+        "operatingMinutes": 597.5509586982333
+      },
+      "score": 9.98991710893213
+    },
+    "constraints": {
+      "ok": true,
+      "errors": [],
+      "checks": [
+        {
+          "name": "Vehicle availability & unique assignment",
+          "ok": true
+        },
+        {
+          "name": "Travel envelope + 2 min recovery",
+          "ok": true
+        },
+        {
+          "name": "10–20 min service headway",
+          "ok": true
+        },
+        {
+          "name": "First departure within published window",
+          "ok": true
+        },
+        {
+          "name": "Accessible vehicle on every route",
+          "ok": true
+        },
+        {
+          "name": "Boarding never exceeds seat capacity",
+          "ok": true
+        }
+      ]
+    },
+    "candidates": 2160,
+    "waitImprovementPercent": -2.34,
+    "eta": {
+      "maeSeconds": 13.95,
+      "coveragePercent": 92.5,
+      "marginMinutes": 0.519837052886627,
+      "calibrationCount": 60,
+      "holdoutCount": 120
+    }
+  },
+  {
+    "scenario": "event",
+    "seed": 2026,
+    "forecastSeed": 2115,
+    "forecastSource": "Independent seeded prior-day sample",
+    "datasetName": "Greenfield Campus",
+    "evaluationWindow": {
+      "start": "07:30",
+      "end": "09:30",
+      "minutes": 120
+    },
+    "baselinePlan": {
+      "label": "Fixed baseline v1",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 15,
+          "shift": 0
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03",
+            "RP-04"
+          ],
+          "headway": 15,
+          "shift": 3
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 6
+        }
+      ]
+    },
+    "proposedPlan": {
+      "label": "RoutePulse proposed plan",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 12,
+          "shift": 3
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03",
+            "RP-04",
+            "RP-07"
+          ],
+          "headway": 10,
+          "shift": 6
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 3
+        }
+      ]
+    },
+    "baseline": {
+      "avgWait": 8.76,
+      "unmet": 9,
+      "boarded": 565,
+      "completed": 555,
+      "missed": 39,
+      "unfinished": 10,
+      "late": 40,
+      "denied": 40,
+      "blocked": 40,
+      "maxLoad": 100,
+      "utilization": 66.23,
+      "fleetUsed": 6,
+      "vehicleMinutes": 476.86,
+      "conflicts": 0,
+      "total": 574,
+      "objectiveComponents": {
+        "wait": 8.755046317345373,
+        "unservedFraction": 0.0156794425087108,
+        "lateFraction": 0.06968641114982578,
+        "operatingMinutes": 476.85818334415524
+      },
+      "score": 10.286805826655002
+    },
+    "proposed": {
+      "avgWait": 6.71,
+      "unmet": 9,
+      "boarded": 565,
+      "completed": 557,
+      "missed": 14,
+      "unfinished": 8,
+      "late": 14,
+      "denied": 24,
+      "blocked": 22,
+      "maxLoad": 100,
+      "utilization": 69.06,
+      "fleetUsed": 7,
+      "vehicleMinutes": 580.11,
+      "conflicts": 0,
+      "total": 574,
+      "objectiveComponents": {
+        "wait": 6.711242470954616,
+        "unservedFraction": 0.0156794425087108,
+        "lateFraction": 0.024390243902439025,
+        "operatingMinutes": 580.1068608069706
+      },
+      "score": 7.851989514268067
+    },
+    "constraints": {
+      "ok": true,
+      "errors": [],
+      "checks": [
+        {
+          "name": "Vehicle availability & unique assignment",
+          "ok": true
+        },
+        {
+          "name": "Travel envelope + 2 min recovery",
+          "ok": true
+        },
+        {
+          "name": "10–20 min service headway",
+          "ok": true
+        },
+        {
+          "name": "First departure within published window",
+          "ok": true
+        },
+        {
+          "name": "Accessible vehicle on every route",
+          "ok": true
+        },
+        {
+          "name": "Boarding never exceeds seat capacity",
+          "ok": true
+        }
+      ]
+    },
+    "candidates": 5427,
+    "waitImprovementPercent": 23.4,
+    "eta": {
+      "maeSeconds": 10.63,
+      "coveragePercent": 89.17,
+      "marginMinutes": 0.34112148755111393,
+      "calibrationCount": 60,
+      "holdoutCount": 120
+    }
+  },
+  {
+    "scenario": "breakdown",
+    "seed": 2026,
+    "forecastSeed": 2115,
+    "forecastSource": "Independent seeded prior-day sample",
+    "datasetName": "Greenfield Campus",
+    "evaluationWindow": {
+      "start": "07:30",
+      "end": "09:30",
+      "minutes": 120
+    },
+    "baselinePlan": {
+      "label": "Fixed baseline v1",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 15,
+          "shift": 0
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03"
+          ],
+          "headway": 15,
+          "shift": 3
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 6
+        }
+      ]
+    },
+    "proposedPlan": {
+      "label": "RoutePulse proposed plan",
+      "routes": [
+        {
+          "route": "A",
+          "vehicles": [
+            "RP-01",
+            "RP-02"
+          ],
+          "headway": 12,
+          "shift": 3
+        },
+        {
+          "route": "B",
+          "vehicles": [
+            "RP-03",
+            "RP-07"
+          ],
+          "headway": 15,
+          "shift": 0
+        },
+        {
+          "route": "C",
+          "vehicles": [
+            "RP-05",
+            "RP-06"
+          ],
+          "headway": 15,
+          "shift": 3
+        }
+      ]
+    },
+    "baseline": {
+      "avgWait": 9.15,
+      "unmet": 9,
+      "boarded": 468,
+      "completed": 464,
+      "missed": 38,
+      "unfinished": 4,
+      "late": 39,
+      "denied": 9,
+      "blocked": 9,
+      "maxLoad": 100,
+      "utilization": 71.42,
+      "fleetUsed": 5,
+      "vehicleMinutes": 428.54,
+      "conflicts": 7,
+      "total": 477,
+      "objectiveComponents": {
+        "wait": 9.148959381342932,
+        "unservedFraction": 0.018867924528301886,
+        "lateFraction": 0.08176100628930817,
+        "operatingMinutes": 428.5367588882999
+      },
+      "score": 10.884068858059559
+    },
+    "proposed": {
+      "avgWait": 6.9,
+      "unmet": 10,
+      "boarded": 467,
+      "completed": 462,
+      "missed": 6,
+      "unfinished": 5,
+      "late": 6,
+      "denied": 2,
+      "blocked": 2,
+      "maxLoad": 100,
+      "utilization": 71.64,
+      "fleetUsed": 6,
+      "vehicleMinutes": 515.82,
+      "conflicts": 0,
+      "total": 477,
+      "objectiveComponents": {
+        "wait": 6.904319845425436,
+        "unservedFraction": 0.020964360587002098,
+        "lateFraction": 0.012578616352201259,
+        "operatingMinutes": 515.8174305634402
+      },
+      "score": 8.073349087830586
+    },
+    "constraints": {
+      "ok": true,
+      "errors": [],
+      "checks": [
+        {
+          "name": "Vehicle availability & unique assignment",
+          "ok": true
+        },
+        {
+          "name": "Travel envelope + 2 min recovery",
+          "ok": true
+        },
+        {
+          "name": "10–20 min service headway",
+          "ok": true
+        },
+        {
+          "name": "First departure within published window",
+          "ok": true
+        },
+        {
+          "name": "Accessible vehicle on every route",
+          "ok": true
+        },
+        {
+          "name": "Boarding never exceeds seat capacity",
+          "ok": true
+        }
+      ]
+    },
+    "candidates": 972,
+    "waitImprovementPercent": 24.59,
+    "eta": {
+      "maeSeconds": 10.63,
+      "coveragePercent": 89.17,
+      "marginMinutes": 0.34112148755111393,
+      "calibrationCount": 60,
+      "holdoutCount": 120
+    }
+  }
+]

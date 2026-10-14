@@ -1,0 +1,11 @@
+{
+  "name": "routepulse-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node routepulse/server.mjs",
+    "start": "node routepulse/server.mjs",
+    "test": "node routepulse/tests/engine.test.mjs",
+    "evaluate": "node routepulse/scripts/evaluate.mjs"
+  }
+}

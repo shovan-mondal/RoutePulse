@@ -1,0 +1,30 @@
+# Local Codex and Devfolio integration tooling, account snapshots and upload URLs
+/.devfolio/
+/.codex-devfolio-protocol/
+/.codex/
+/.agents/
+/.sites-runtime/
+
+# Generated download packages and imported evaluation runs
+/RoutePulse-hackathon.zip
+/routepulse/data/imported/
+
+# Dependencies, local configuration and logs
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Transient browser workflow captures; curated product screenshots stay tracked
+/routepulse/artifacts/import-review.png
+/routepulse/artifacts/import-validation.png
+/routepulse/artifacts/imported-student.png
+/routepulse/artifacts/passenger-connections.png
+/routepulse/artifacts/scenario-mobile.png

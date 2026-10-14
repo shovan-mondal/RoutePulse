@@ -1,0 +1,11 @@
+{
+  "name": "routepulse",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node tests/engine.test.mjs",
+    "evaluate": "node scripts/evaluate.mjs"
+  }
+}
